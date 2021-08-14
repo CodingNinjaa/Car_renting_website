@@ -23,7 +23,17 @@
 body{
     background-color: black;
 }
-
+.preloader{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    background-image: url('https://media.giphy.com/media/VF07IfPzYLrwCN1O1L/giphy.gif');
+    background-size: 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 200;
+}
 .card {
 
     display: inline-block;
@@ -246,8 +256,8 @@ footer{
 }
 </style>
     </head>
-    <body>
-
+    <body onload="myfun()">
+<div class="preloader"></div>
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark">
         <!--  <i class="fab fal fa-500px" style="margin:10px"></i>          ICON  -->
         <img class="logo" src="https://www.carlogos.org/car-logos/tesla-logo-2200x2800-show.png" style=" width: 55px;margin-left: 6px;margin-right: 20px">
@@ -477,7 +487,15 @@ footer{
 			</div>
     </footer>
     
+    <script>
+        var preloader = document.querySelector('.preloader')
+        console.log(preloader);
+        function myfun(){
+            preloader.style.display = "none";
+        }
+    </script>
     <script src="homepage.js"></script>
+	
     </body>
 </html>
 
